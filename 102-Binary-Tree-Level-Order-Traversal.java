@@ -25,9 +25,9 @@ class Solution {
             List<Integer> temp = new ArrayList<>();
             int s = q.size(); // number of elements in current level
             for(int i=0; i<s; i++){
-                TreeNode node = q.poll();
+                TreeNode node = q.poll();//O(1) for normal queue
                 temp.add(node.val);
-                if(node.left != null) q.offer(node.left);
+                if(node.left != null) q.offer(node.left);//O(1)
                 if(node.right != null) q.offer(node.right);
             }
             ans.add(temp);
